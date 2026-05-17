@@ -3,6 +3,6 @@ package app;
 public class DataRepository {
 
     public int[] getData() {
-        return new int[]{7, 4, 5, 2};
+        return new int[]{1, 2, 3, 4, 5};
     }
 }
