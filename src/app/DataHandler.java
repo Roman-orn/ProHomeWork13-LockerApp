@@ -7,7 +7,7 @@ public class DataHandler {
     private final ReentrantLock lock = new ReentrantLock();
 
     public int[] increment(int[] data) {
-        if(data == null || data.length == 0){
+        if (data == null || data.length == 0) {
             throw new IllegalArgumentException("No data available!");
         }
         lock.lock();
@@ -17,8 +17,6 @@ public class DataHandler {
                     data[i]++;
                 }
             }
-        } catch (NullPointerException ex) {
-            System.out.println(ex.getMessage());
         } finally {
             lock.unlock();
         }
